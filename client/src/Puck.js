@@ -7,7 +7,7 @@ const Puck = () => {
 
   var puckPosition = {x: 700, y:330};
 
-  const socket = io.connect("https://pingpong-v5z5.onrender.com:3001");
+  const socket = io.connect("https://pingpong-v5z5.onrender.com");
 
   // useEffect(() => {
   //   socket.emit("initPuckPosition", {puckPosition : puckPosition});
