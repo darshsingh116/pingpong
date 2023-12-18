@@ -1,0 +1,11 @@
+/* Assuming you are styling a Pong game puck */
+.pong-puck {
+    width: 20px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    background-color: #000000; /* Change to the desired background color */
+    border-radius: 50%; /* Make it a circle */
+    position: absolute; /* Position the puck absolutely within its container */
+    
+    /* Add other styles as needed */
+  }
+  
