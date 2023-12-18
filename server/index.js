@@ -17,7 +17,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: "https://pingpong-not-blackbucks-projects.vercel.app",
         methods : ["GET" , "POST"],
     }
 })
@@ -169,6 +169,8 @@ io.on("connection", (socket) =>{
 
     
 });
+
+app.get("/",(req,res) => {res.send("hello")});
 
 server.listen(3001,() => {
     console.log("server is running");

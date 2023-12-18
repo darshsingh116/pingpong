@@ -4,7 +4,7 @@ import io from "socket.io-client";
 import { useEffect, useState } from "react";
 import "./Puck.css";
 
-const socket = io.connect("http://localhost:3001");
+const socket = io.connect("https://pingpong-v5z5.onrender.com:3001");
 
 
 
