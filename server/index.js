@@ -43,7 +43,10 @@ io.on("connection", (socket) =>{
         playerconnected[data-1] = true;
     })
 
-
+    sockety.on("chat", (data) => {
+        playerconnected[data-1] = true;
+    })
+    
     
 
     
@@ -78,10 +81,10 @@ io.on("connection", (socket) =>{
             collision.y1 = localposition2.y - puckPosition.y;
             collision.x2 = puckPosition.x-localposition1.x;
             collision.y2 = localposition1.y - puckPosition.y;
-            console.log(collision);
+            //console.log(collision);
 
             if((collision.x1 < 10) && ((collision.y1 < 5) && (collision.y1 >= -85)) && (puckDir.x%2)===0){
-                console.log(collision);
+                //console.log(collision);
                 puckDir.x++;
                 collision.y1 = collision.y1 + 85;
                 if(collision.y1 === 45) { velocity.y = 0;}
@@ -103,7 +106,7 @@ io.on("connection", (socket) =>{
                 if(collision.y2 > 45){
                     //console.log(collision.y2-45);
                     velocity.y = -(0.21 * (collision.y2-45));
-                    console.log(velocity.y);
+                    //console.log(velocity.y);
                 } else if(collision.y2 < 45){
                     velocity.y = (0.21 * ((-1) * (collision.y2 - 45)));
                 }
@@ -138,10 +141,10 @@ io.on("connection", (socket) =>{
                 gameStart();
             }
             if(puckPosition.y < 0 || puckPosition.y > 700){
-                console.log(velocity.y)
+                //console.log(velocity.y)
                 velocity.y = (-1) * velocity.y;
-                console.log(velocity.y)
-                console.log("~~");
+                //console.log(velocity.y)
+                //console.log("~~");
             }
 
 

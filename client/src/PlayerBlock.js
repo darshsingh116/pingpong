@@ -4,7 +4,7 @@ import io from "socket.io-client";
 import { useEffect, useState } from "react";
 import "./Puck.css";
 
-const socket = io.connect("https://pingpong-v5z5.onrender.com");
+const socket = io.connect("http://13.235.113.216:3001");
 
 
 
@@ -20,6 +20,8 @@ const PlayerBlock = ({player}) => {
     socket.emit("GameStart", {});
     console.log("game starto");
   },[]);
+
+
 
     const [position1, setPosition1] = useState({ x: 300, y: 300 });
     var localposition1 = { x: 300, y: 300 };
